@@ -21,6 +21,10 @@ import java.util.function.Predicate;
  *                 大堂经理通知正在等待饭局的人进房间(停止等待, 异步转同步)
  *
  *                 总结： 同步线程=>(请求异步线程, 开始等待) => (异步线程结束, 停止等待唤醒)=>同步线程
+ *
+ *
+ *                 集群之下把单机锁换成分布式锁
+ *                       把guardObjectMap换成分布式对象
  **/
 public class GuardObject<T> {
     private ReentrantLock lock = new ReentrantLock();
