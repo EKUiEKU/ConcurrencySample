@@ -14,7 +14,7 @@ import top.xizai.study.redisson.RedissonInstance;
 @Log4j2
 public class RedissonBlockQueueConsumerTest2 {
     public static void main(String[] args) {
-        RedissonClient client = RedissonInstance.getRedissonClient();
+        RedissonClient client = RedissonInstance.getRedissonClient(args);
         RBlockingQueue<String> blockingQueue = client.getBlockingQueue(RedissonConstant.REDISSON_BLOCK_QUEUE);
 
         RedissonBlockQueueConsumer<String> consumer = new RedissonBlockQueueConsumer<>();

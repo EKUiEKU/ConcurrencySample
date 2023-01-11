@@ -16,7 +16,7 @@ import java.util.concurrent.atomic.AtomicLong;
  **/
 public class RedissonBlockQueueProductTest {
     public static void main(String[] args) {
-        RedissonClient client = RedissonInstance.getRedissonClient();
+        RedissonClient client = RedissonInstance.getRedissonClient(args);
         RBlockingQueue<String> blockingQueue = client.getBlockingQueue(RedissonConstant.REDISSON_BLOCK_QUEUE);
         RAtomicLong incrLong = client.getAtomicLong(RedissonConstant.REDISSON_BLOCK_QUEUE_INCR);
 
