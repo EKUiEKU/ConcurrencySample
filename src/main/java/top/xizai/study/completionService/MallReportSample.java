@@ -4,6 +4,7 @@ import cn.hutool.core.util.RandomUtil;
 import lombok.extern.log4j.Log4j2;
 import top.xizai.study.utils.ThreadPoolInstance;
 
+import java.util.List;
 import java.util.concurrent.*;
 
 /**
